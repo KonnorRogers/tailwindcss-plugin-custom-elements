@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/output.css" rel="stylesheet">
+    <script type="module" src="/custom-elements.js"></script>
+  </head>
+  <body>
+    <my-element class="part-[base]:bg-red-500">
+      Hello World
+    </my-element>
+
+    <br><br>
+
+    <my-element class="hover:part-[base]:bg-red-500">
+      Turn red on hover
+    </my-element>
+
+    <my-element class="part-[base]:hover:bg-blue-500">
+      Turn blue on hover
+    </my-element>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "name": "tailwindcss-plugin-part",
+  "version": "1.0.1",
+  "description": "Use the ::part() pseudo-element in Tailwind",
+  "main": "./exports/index.js",
+  "module": "./exports/index.js",
+  "types": "./exports/index.d.ts",
+  "exports": {
+    ".": "./exports/index.js",
+    "./package.json": "./package.json",
+    "./exports/*.js": "./exports/*.js",
+    "./exports/*": "./exports/*",
+    "./types/*": "./types/*.d.ts"
+  },
+  "type": "module",
+  "files": [
+    "exports",
+    "internal",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "tailwindcss -i ./input.css -o ./output.css --watch",
+    "clean": "rimraf -g \"./exports/**/*.d.ts\" \"./internal/**/*.d.ts\"",
+    "build": "npm run clean && tsc",
+    "deploy:patch": "npm run build && npm version patch && npm publish && git push --follow-tags",
+    "deploy:minor": "npm run build && npm version minor && npm publish && git push --follow-tags",
+    "deploy:major": "npm run build && npm version major && npm publish && git push --follow-tags",
+    "test": "web-test-runner"
+  },
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "plugin",
+    "webcomponents",
+    "part",
+    "shadowdom"
+  ],
+  "license": "MIT",
+  "repository": "git@github.com:KonnorRogers/tailwindcss-plugin-part.git",
+  "bugs": {
+    "url": "https://github.com/KonnorRogers/tailwindcss-plugin-part/issues"
+  },
+  "homepage": "https://github.com/KonnorRogers/tailwindcss-plugin-part",
+  "author": "KonnorRogers <konnor5456@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "4.3.4-fix.0",
+    "@open-wc/testing-helpers": "^3.0.0",
+    "@web/test-runner": "^0.18.0",
+    "@web/test-runner-playwright": "^0.11.0",
+    "playwright": "^1.41.1",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-plugin-part": "link:.",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
