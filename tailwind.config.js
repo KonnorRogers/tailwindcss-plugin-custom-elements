@@ -1,4 +1,7 @@
-import {TailwindCssPluginPart} from "./exports/index.js"
+import {
+  StatePlugin,
+  PartPlugin,
+} from "tailwindcss-plugin-custom-elements"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,7 +12,8 @@ export default {
     extend: {},
   },
   plugins: [
-    TailwindCssPluginPart()
+    StatePlugin(),
+    PartPlugin()
   ],
 }
 
