@@ -1,7 +1,7 @@
 {
-  "name": "tailwindcss-plugin-part",
-  "version": "1.0.1",
-  "description": "Use the ::part() pseudo-element in Tailwind",
+  "name": "tailwindcss-plugin-custom-elements",
+  "version": "0.0.0",
+  "description": "Use ::part() and :state() in Tailwind",
   "main": "./exports/index.js",
   "module": "./exports/index.js",
   "types": "./exports/index.d.ts",
@@ -34,15 +34,15 @@
     "tailwind",
     "plugin",
     "webcomponents",
-    "part",
+    "custom-elements",
     "shadowdom"
   ],
   "license": "MIT",
-  "repository": "git@github.com:KonnorRogers/tailwindcss-plugin-part.git",
+  "repository": "git@github.com:KonnorRogers/tailwindcss-plugin-custom-elements.git",
   "bugs": {
-    "url": "https://github.com/KonnorRogers/tailwindcss-plugin-part/issues"
+    "url": "https://github.com/KonnorRogers/tailwindcss-plugin-custom-elements/issues"
   },
-  "homepage": "https://github.com/KonnorRogers/tailwindcss-plugin-part",
+  "homepage": "https://github.com/KonnorRogers/tailwindcss-plugin-custom-elements",
   "author": "KonnorRogers <konnor5456@gmail.com>",
   "publishConfig": {
     "access": "public"
@@ -55,10 +55,10 @@
     "playwright": "^1.41.1",
     "rimraf": "^5.0.5",
     "tailwindcss": "^3.4.1",
-    "tailwindcss-plugin-part": "link:.",
+    "tailwindcss-plugin-custom-elements": "link:.",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3"
   }
 }
