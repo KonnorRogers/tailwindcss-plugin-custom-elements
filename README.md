@@ -43,10 +43,10 @@ The basic syntaxes are:
 ## Example
 
 Here's an example where we set the background-color to `red-500` on a shadow root part with the name of `"base"`,
-and then on `:hover`, we change the background color to `blue-500`
+and then on `:state(valid)`, we change the background color to `green-500`
 
 ```html
-<my-web-component class="part-[base]:bg-red-500 state-[valid]:bg-green">
+<my-web-component class="part-[base]:bg-red-500 state-[valid]:bg-green-500">
   <ShadowRoot>
     <div part="base"></div>
   </ShadowRoot>
@@ -57,7 +57,7 @@ Generated selectors:
 
 ```css
 &::part(base).bg-red-500 { background-color: theme("colors.red.500"); }
-&::state(valid):bg-green-600 { background-color: theme("colors.green.600"); }
+&:state(valid):bg-green-500 { background-color: theme("colors.green.600"); }
 ```
 
 ## Additional notes
